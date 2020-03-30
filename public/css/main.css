@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.page-footer {
+  padding-top: 0.5em;
+}
+
+#login, #register {
+  margin-top: 1em;
+}

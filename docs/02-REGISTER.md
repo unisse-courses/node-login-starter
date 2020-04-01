@@ -185,7 +185,7 @@ bcrypt.hash(password, saltRounds, (err, hashed) => {
       res.redirect('/register');
       // res.status(500).send({ message: "Could not create user"});
     } else {
-      req.flash('success_msg', 'Your are now registered! Login below.');
+      req.flash('success_msg', 'You are now registered! Login below.');
       res.redirect('/login');
     }
   });

@@ -78,4 +78,4 @@ This partial is loaded in [`views/login.hbs`](../views/login.hbs) and  [`views/r
 
 #### That's it for the session configurations.
 
-### Next: [`02-REGISTER`](02-REGISTER)
+### Next: [`02-REGISTER`](02-REGISTER.md)

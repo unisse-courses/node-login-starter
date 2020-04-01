@@ -1,4 +1,4 @@
-# Simple Register + Login Application using `express-session`
+# Register + Login Application using `express-session`
 This is a starter code for building a simple user authenctication gateway for an application. The code is structured according to the MVC framework.
 
 ## Learning Objectives
@@ -23,7 +23,7 @@ This tutorial assumes you already have pre-existing knowledge on the following l
 1. Fork this repository to create a copy on your GitHub account.
 2. Clone the forked repository to your machine.
   ```shell
-    git clone https://github.com/YOUR_USERNAME/node-login-starter.git
+  git clone https://github.com/YOUR_USERNAME/node-login-starter.git
   ```
 3. Navigate to the directory.
   ```shell

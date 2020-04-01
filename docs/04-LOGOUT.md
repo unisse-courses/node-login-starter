@@ -4,7 +4,7 @@ We're almost done! Now that we have a user logged in to the application, we need
 
 But when user clicks on the Logout link (or button), the session has to be deleted.
 
-The `/logout` route is already defined in [`routes/auth.js`](routes/auth.js). It's using the `logoutUser` function in the controller.
+The `/logout` route is already defined in [`routes/auth.js`](../routes/auth.js). It's using the `logoutUser` function in the controller.
 ```JavaScript
 router.get('/logout', userController.logoutUser);
 ```
@@ -32,7 +32,7 @@ Since we prefer asynchronous functions, we clear the cookie and redirect once th
 
 Additionally, we can also safeguard the route `/logout` by adding the middleware function `checkAuthenticated` we created before executing the destroy and redirect. This is so that unauthenticated users cannot directly access [http://localhost:9090/logout](http://localhost:9090/logout).
 
-Update the `/logout` route in [`routes/auth.js`](routes/auth.js) to this:
+Update the `/logout` route in [`routes/auth.js`](../routes/auth.js) to this:
 ```JavaScript
 router.get('/logout', checkAuthenticated, userController.logoutUser);
 ```

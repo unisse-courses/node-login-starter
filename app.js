@@ -39,5 +39,8 @@ app.use(bodyParser.urlencoded({
 // serve static files
 app.use(express.static('public'));
 
+// Insert server configuration after this comment
+
+
 app.use('/', authRouter); // Login/registration routes
 app.use('/', indexRouter); // Main index route

@@ -22,19 +22,12 @@ To destroy the session, we need to check if the session exists  in the `req` obj
 exports.logoutUser = (req, res) => {
   if (req.session) {
     req.session.destroy(() => {
-      res.clearCookie('connect.sid')
-      res.redirect('/')
+      res.clearCookie('connect.sid');
+      res.redirect('/login');
     });
   }
 };
 ```
 Since we prefer asynchronous functions, we clear the cookie and redirect once the `destroy()` function is complete.
 
-Additionally, we can also safeguard the route `/logout` by adding the middleware function `checkAuthenticated` we created before executing the destroy and redirect. This is so that unauthenticated users cannot directly access [http://localhost:9090/logout](http://localhost:9090/logout).
-
-Update the `/logout` route in [`routes/auth.js`](../routes/auth.js) to this:
-```JavaScript
-router.get('/logout', checkAuthenticated, userController.logoutUser);
-```
-
-That's it, we're done!!! 
+That's it, we're done!!!

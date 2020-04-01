@@ -6,7 +6,7 @@ But when user clicks on the Logout link (or button), the session has to be delet
 
 The `/logout` route is already defined in [`routes/auth.js`](../routes/auth.js). It's using the `logoutUser` function in the controller.
 ```JavaScript
-router.get('/logout', userController.logoutUser);
+router.get('/logout', isPrivate, userController.logoutUser);
 ```
 
 In [`userController.js`](../controllers/userController.js), there's already a function for logout which simply redirects to the login page. But we need to ensure that the session is destroyed in the database.
@@ -37,4 +37,4 @@ Update the `/logout` route in [`routes/auth.js`](../routes/auth.js) to this:
 router.get('/logout', checkAuthenticated, userController.logoutUser);
 ```
 
-That's it, we're done!
+That's it, we're done!!! 

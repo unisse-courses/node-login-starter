@@ -38,7 +38,7 @@ exports.registerUser = (req, res) => {
 In this example, we'll using `express-validator` to help us set up validation rules and custom error messages. The validator is a middleware that needs to be executed before the route callback.
 
 From the [`express-validator` docs](https://express-validator.github.io/docs/index.html):
-> ```JavaScript
+```JavaScript
 [
   // username must be an email
   check('username').isEmail(),

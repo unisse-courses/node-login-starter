@@ -12,7 +12,7 @@ const indexRouter = require('./routes/index');
 
 // Creates the express application
 const app = express();
-const port = 3000;
+const port = 9090;
 
 // Listening to the port provided
 app.listen(port, () => {

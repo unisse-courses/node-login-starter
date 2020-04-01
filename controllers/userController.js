@@ -27,9 +27,10 @@ exports.loginUser = (req, res) => {
   //        a. Redirect to login page with error message
 
   // 3. If INVALID, redirect to login page with errors
-  res.redirect('/')
+  res.redirect('/');
 };
 
 exports.logoutUser = (req, res) => {
   // Destroy the session and redirect to login page
+  res.redirect('/login');
 };
